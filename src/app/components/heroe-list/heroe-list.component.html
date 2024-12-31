@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Lista de Heroes</h1>
+    <button type="button" class="btn btn-success">Añadir</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Heroe</th>
+            <th scope="col">Poder</th>
+            <th scope="col">Universo</th>
+            <th scope="col">Debilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (heroe of listadoHeroes; track heroe.id){
+                <tr>
+                    <th scope="row">{{heroe.id}}</th>
+                    <td>{{heroe.nombre}}</td>
+                    <td>{{heroe.uiverso}}</td>
+                    <td>{{heroe.debilidad}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">Actualizar</button>
+                        <button type="button" class="btn btn-danger" onclick="EliminarHeroe(heroe.id)">Eliminar</button>
+                    </td>
+                    
+                  </tr>
+            }
+          
+                </tbody>
+      </table>
+</div>
+
